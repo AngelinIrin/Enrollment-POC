@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Enrollment Form" icon-name="standard:lead">
+        <div class="slds-m-around_medium">
+            <lightning-input label="First Name" value={firstName} onchange={handleInputChange} data-id="firstName"></lightning-input>
+            <lightning-input label="Last Name" value={lastName} onchange={handleInputChange} data-id="lastName"></lightning-input>
+            <lightning-input label="Company" value={company} onchange={handleInputChange} data-id="company"></lightning-input>
+            <lightning-input label="Email" value={email} onchange={handleInputChange} data-id="email"></lightning-input>
+        </div>
+
+        <lightning-button label="Submit" variant="brand" onclick={handleSubmit}></lightning-button>
+
+        <template if:true={message}>
+            <p class="slds-m-top_medium">{message}</p>
+        </template>
+    </lightning-card>
+</template>
